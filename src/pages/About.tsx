@@ -33,7 +33,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Bold Technology Solutions INC was founded with a simple mission: to empower businesses 
+                Bold Technology Solutions inc was founded with a simple mission: to empower businesses
                 with cutting-edge technology solutions that drive growth and success. We understand 
                 that in today's digital world, having the right technology infrastructure is crucial 
                 for business success.
