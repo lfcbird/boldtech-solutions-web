@@ -9,49 +9,57 @@ const Services = () => {
       title: 'Web Development',
       description: 'Custom websites and web applications built with modern technologies to help your business establish a strong online presence.',
       features: ['Responsive Design', 'E-commerce Solutions', 'Content Management Systems', 'API Integration'],
-      icon: '🌐'
+      icon: '🌐',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80'
     },
     {
       title: 'Software Development',
       description: 'Mobile and standalone applications tailored to your specific business needs and requirements.',
       features: ['Mobile Apps (iOS/Android)', 'Desktop Applications', 'Custom Software Solutions', 'Legacy System Modernization'],
-      icon: '💻'
+      icon: '💻',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80'
     },
     {
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your business from cyber threats and ensure data integrity.',
       features: ['Security Assessments', 'Network Security', 'Data Protection', 'Compliance Solutions'],
-      icon: '🔒'
+      icon: '🔒',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Remote/Onsite IT Support',
       description: 'Professional IT support services to keep your systems running smoothly and minimize downtime.',
       features: ['24/7 Remote Support', 'Onsite Technical Support', 'System Maintenance', 'Troubleshooting'],
-      icon: '🛠️'
+      icon: '🛠️',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'IT Infrastructure',
       description: 'Design, implement, and manage robust IT infrastructure solutions that scale with your business.',
       features: ['Network Design & Setup', 'Server Installation', 'Cloud Solutions', 'Infrastructure Monitoring'],
-      icon: '🏗️'
+      icon: '🏗️',
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Asset Disposal',
       description: 'Secure and environmentally responsible disposal of your old IT equipment and data destruction.',
       features: ['Data Destruction', 'Equipment Recycling', 'Certificate of Destruction', 'Environmental Compliance'],
-      icon: '♻️'
+      icon: '♻️',
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Custom PC Build',
       description: 'High-performance custom computers built to your exact specifications and requirements.',
       features: ['Gaming PCs', 'Workstations', 'Servers', 'Performance Optimization'],
-      icon: '🖥️'
+      icon: '🖥️',
+      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Printer & Office Device Service',
       description: 'Maintenance and repair services for printers and other office equipment to keep your operations running.',
       features: ['Printer Repair', 'Maintenance Plans', 'Supply Management', 'Equipment Upgrades'],
-      icon: '🖨️'
+      icon: '🖨️',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     }
   ];
 
@@ -75,29 +83,38 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="flex items-start mb-4">
-                <div className="text-4xl mr-4">{service.icon}</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {service.title}
-                  </h3>
-                </div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <p className="text-gray-600 mb-6">
-                {service.description}
-              </p>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <span className="text-blue-600 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <div className="p-6">
+                <div className="flex items-start mb-4">
+                  <div className="text-3xl mr-4">{service.icon}</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  {service.description}
+                </p>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-600">
+                        <span className="text-blue-600 mr-2">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

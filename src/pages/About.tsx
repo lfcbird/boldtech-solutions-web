@@ -18,6 +18,15 @@ const About = () => {
           </p>
         </div>
 
+        {/* Hero Image */}
+        <div className="mb-16">
+          <img 
+            src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+            alt="Professional working with technology"
+            className="w-full h-96 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+
         {/* Company Story */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -41,7 +50,20 @@ const About = () => {
                 to serve their business objectives.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg p-8 text-white">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Modern technology setup"
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Mission Section */}
+        <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg p-8 text-white mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="mb-6">
                 To provide innovative, reliable, and comprehensive technology solutions that empower 
@@ -62,6 +84,13 @@ const About = () => {
                 </div>
               </div>
             </div>
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Digital matrix background"
+                className="w-full h-64 object-cover rounded-lg opacity-80"
+              />
+            </div>
           </div>
         </div>
 
@@ -70,8 +99,12 @@ const About = () => {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔧</span>
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="Excellence in technology"
+                  className="w-full h-32 object-cover rounded-lg"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
               <p className="text-gray-600">
@@ -81,8 +114,12 @@ const About = () => {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="Partnership and collaboration"
+                  className="w-full h-32 object-cover rounded-lg"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Partnership</h3>
               <p className="text-gray-600">
@@ -92,8 +129,12 @@ const About = () => {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚀</span>
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                  alt="Innovation in programming"
+                  className="w-full h-32 object-cover rounded-lg"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
               <p className="text-gray-600">

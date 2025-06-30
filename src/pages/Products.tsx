@@ -9,25 +9,29 @@ const Products = () => {
       title: 'Windows OS',
       description: 'Genuine Microsoft Windows operating system licenses for your business computers.',
       versions: ['Windows 11 Pro', 'Windows 11 Home', 'Windows Server 2022'],
-      icon: '🪟'
+      icon: '🪟',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Microsoft Office',
       description: 'Complete productivity suite with Word, Excel, PowerPoint, and more.',
       versions: ['Office 365 Business', 'Office 2021 Professional', 'Office Enterprise'],
-      icon: '📊'
+      icon: '📊',
+      image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80'
     },
     {
       title: 'MS Server Licenses',
       description: 'Microsoft Server licenses for your business infrastructure needs.',
       versions: ['Windows Server Standard', 'Windows Server Datacenter', 'SQL Server'],
-      icon: '🖥️'
+      icon: '🖥️',
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Antivirus Solutions',
       description: 'Enterprise-grade antivirus and security software to protect your systems.',
       versions: ['Norton Business', 'McAfee Total Protection', 'Bitdefender Enterprise'],
-      icon: '🛡️'
+      icon: '🛡️',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     }
   ];
 
@@ -36,19 +40,22 @@ const Products = () => {
       title: 'Pre-Built PCs',
       description: 'High-quality pre-built computers optimized for business use.',
       specs: ['Business Desktops', 'Gaming PCs', 'Workstations', 'All-in-One PCs'],
-      icon: '💻'
+      icon: '💻',
+      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Home Automation',
       description: 'Smart home solutions to automate and control your living space.',
       specs: ['Smart Lighting', 'Security Systems', 'Climate Control', 'Voice Assistants'],
-      icon: '🏠'
+      icon: '🏠',
+      image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Security Cameras',
       description: 'Professional surveillance systems for home and business security.',
       specs: ['IP Cameras', 'NVR Systems', 'Wireless Cameras', '4K Resolution'],
-      icon: '📹'
+      icon: '📹',
+      image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     }
   ];
 
@@ -67,6 +74,15 @@ const Products = () => {
           </p>
         </div>
 
+        {/* Hero Image */}
+        <div className="mb-16">
+          <img 
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+            alt="Technology products and software"
+            className="w-full h-96 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+
         {/* Software Licenses Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Software Licenses</h2>
@@ -74,34 +90,43 @@ const Products = () => {
             {softwareLicenses.map((product, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-start mb-4">
-                  <div className="text-4xl mr-4">{product.icon}</div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      {product.title}
-                    </h3>
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-start mb-4">
+                    <div className="text-3xl mr-4">{product.icon}</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                        {product.title}
+                      </h3>
+                    </div>
                   </div>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  {product.description}
-                </p>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Available Versions:</h4>
-                  <ul className="space-y-2">
-                    {product.versions.map((version, versionIndex) => (
-                      <li key={versionIndex} className="flex items-center text-gray-600">
-                        <span className="text-blue-600 mr-2">✓</span>
-                        {version}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-6">
-                  <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Request Quote
-                  </button>
+                  <p className="text-gray-600 mb-6">
+                    {product.description}
+                  </p>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Available Versions:</h4>
+                    <ul className="space-y-2">
+                      {product.versions.map((version, versionIndex) => (
+                        <li key={versionIndex} className="flex items-center text-gray-600">
+                          <span className="text-blue-600 mr-2">✓</span>
+                          {version}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mt-6">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                      Request Quote
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -129,32 +154,41 @@ const Products = () => {
             {hardwareProducts.map((product, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-2">{product.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {product.title}
-                  </h3>
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <p className="text-gray-600 mb-6 text-center">
-                  {product.description}
-                </p>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 text-center">Features:</h4>
-                  <ul className="space-y-2">
-                    {product.specs.map((spec, specIndex) => (
-                      <li key={specIndex} className="flex items-center text-gray-600">
-                        <span className="text-blue-600 mr-2">✓</span>
-                        {spec}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-6 text-center">
-                  <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Learn More
-                  </button>
+                <div className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="text-3xl mb-2">{product.icon}</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {product.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 mb-6 text-center">
+                    {product.description}
+                  </p>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-center">Features:</h4>
+                    <ul className="space-y-2">
+                      {product.specs.map((spec, specIndex) => (
+                        <li key={specIndex} className="flex items-center text-gray-600">
+                          <span className="text-blue-600 mr-2">✓</span>
+                          {spec}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mt-6 text-center">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                      Learn More
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

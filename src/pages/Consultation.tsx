@@ -42,6 +42,15 @@ const Consultation = () => {
           </p>
         </div>
 
+        {/* Hero Image */}
+        <div className="mb-16">
+          <img 
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="IT consultation meeting"
+            className="w-full h-96 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Consultation Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -161,6 +170,13 @@ const Consultation = () => {
           {/* What to Expect */}
           <div className="space-y-8">
             <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="IT consultation process"
+                  className="w-full h-40 object-cover rounded-lg"
+                />
+              </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 What to Expect
               </h2>
@@ -220,6 +236,13 @@ const Consultation = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+                  alt="Professional consultation"
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Prefer to Call?
               </h2>

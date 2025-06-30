@@ -8,32 +8,38 @@ const Index = () => {
     {
       title: 'Web Development',
       description: 'Custom websites and web applications tailored to your business needs.',
-      icon: '🌐'
+      icon: '🌐',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80'
     },
     {
       title: 'Software Development',
       description: 'Mobile and standalone applications to streamline your operations.',
-      icon: '💻'
+      icon: '💻',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80'
     },
     {
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions.',
-      icon: '🔒'
+      icon: '🔒',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'IT Support',
       description: 'Remote and onsite support to keep your systems running smoothly.',
-      icon: '🛠️'
+      icon: '🛠️',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'IT Infrastructure',
       description: 'Design and implement robust IT infrastructure solutions.',
-      icon: '🏗️'
+      icon: '🏗️',
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       title: 'Custom PC Build',
       description: 'High-performance custom computers built to your specifications.',
-      icon: '🖥️'
+      icon: '🖥️',
+      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     }
   ];
 
@@ -41,9 +47,17 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* Hero Section with Background Image */}
+      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Technology background" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Bold Technology Solutions
@@ -89,15 +103,24 @@ const Index = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">
-                  {service.description}
-                </p>
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="text-3xl mb-3">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -145,6 +168,55 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Business Focus</h3>
               <p className="text-gray-600">Solutions designed to help your business grow and succeed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Professional IT Support
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our team of experts is here to support your business with cutting-edge technology solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="IT professionals working"
+                className="rounded-lg shadow-lg w-full h-80 object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Dedicated IT Professionals</h3>
+              <p className="text-gray-600 mb-6">
+                Our experienced team works around the clock to ensure your technology infrastructure 
+                runs smoothly and efficiently. We provide both remote and onsite support to meet your needs.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-600">
+                  <span className="text-blue-600 mr-3">✓</span>
+                  24/7 Remote monitoring and support
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <span className="text-blue-600 mr-3">✓</span>
+                  Onsite technical assistance when needed
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <span className="text-blue-600 mr-3">✓</span>
+                  Proactive maintenance and updates
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <span className="text-blue-600 mr-3">✓</span>
+                  Emergency response and troubleshooting
+                </li>
+              </ul>
             </div>
           </div>
         </div>
